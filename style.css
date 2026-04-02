@@ -1,0 +1,11 @@
+body { 
+  margin 0;
+  overflow: hidden;
+  background: black;
+}
+
+#cube {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  transform-style: preserve-3d;
