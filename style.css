@@ -2,6 +2,7 @@ body {
   margin 0;
   overflow: hidden;
   background: black;
+  perspective: 800px; 
 }
 
 #cube {
@@ -9,14 +10,15 @@ body {
   width: 100px;
   height: 100px;
   transform-style: preserve-3d;
+  transform: translate(100px, 100px);
 }
 
 .face {
   position: absolute;
   width: 100px;
   height: 100px;
-  background: lime;
-  border: 2px solid black;
+  background: red;
+  border: 2px solid white;
   image-rendering: pixelated;
 }
 
