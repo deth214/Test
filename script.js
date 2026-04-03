@@ -1,5 +1,7 @@
-console.log("JS loaded")
+console.log("JS loaded");
+
 let cube = document.getElementById("cube");
+
 if (!cube) {
   console.log("Cube not found");
 }
@@ -16,8 +18,8 @@ function animate() {
   x += dx;
   y += dy;
 
-  //Bounce on edge
-  if (x <=0 || x + 100 >= window.innerWidth} {
+  // Bounce on edge
+  if (x <= 0 || x + 100 >= window.innerWidth) {
     dx *= -1;
   }
 
@@ -27,7 +29,8 @@ function animate() {
 
   angle += 1;
 
-  cube.style.transform = `translate(${x}px, $(y)px) rotateX(${angle}deg) rotateY(${angle}deg)`;
+  cube.style.transform =
+    `translate(${x}px, ${y}px) rotateX(${angle}deg) rotateY(${angle}deg)`;
 
   requestAnimationFrame(animate);
 }
