@@ -1,30 +1,31 @@
-funciton validate() {
-  let username = document.getElementById("username").value;
-  let password = document.getElementById("password").value;
-  let message = document.getElementById("message");
+let cube = document.getElementById("cube");
 
-if(username.length < 6) {
-  message.innerText = "Username too short";
-  return;
-}
-if(password.length < 6) {
-  message.innerText = "Password too short";
-  return;
-}
+let x = 100;
+let y = 100;
 
-let hasDigit = false;
+let dx = 2;
+let dy = 2;
 
-for (let x of password) {
-  if (!isNaN(x)) {
-    hasDigit = true;
-    break;
+let angle = 0;
+
+function animate() {
+  x += dx;
+  y += dy;
+
+  //Bounce on edge
+  if (x <=0 || x + 100 >= window.innerWidth} {
+    dx *= -1;
   }
+
+  if (y <= 0 || y + 100 >= window.innerHeight) {
+    dy *= -1;
+  }
+
+  angle += 1;
+
+  cube.style.transform = 'translate(${x}px, $(y)px) rotateX(${angle}deg) rotateY(${angle}deg)';
+
+  requestAnimationFrame(animate);
 }
 
-if (!hasDigit) {
-  message.innerText = "Password must contain a number";
-  return;
-}
-
-message.innerText = "Account created";
-}
+animate();
