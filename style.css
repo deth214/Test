@@ -1,8 +1,15 @@
 body { 
   margin: 0;
+  overflow: hidden;
   background: black;
   perspective: 800px; 
 }
+
+#scene {
+  width: 100vw;
+  height: 100vh;
+  perspective: 800px;
+  position: relative;
 
 #cube {
   position: absolute;
@@ -18,7 +25,7 @@ body {
   height: 100px;
   background: red;
   border: 2px solid white;
-  image-rendering: pixelated;
+  opacity: 0.9;
 }
 
 /* Position each face */
