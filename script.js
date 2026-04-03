@@ -1,5 +1,8 @@
 console.log("JS loaded")
 let cube = document.getElementById("cube");
+if (!cube) {
+  console.log("Cube not found");
+}
 
 let x = 100;
 let y = 100;
