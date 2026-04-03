@@ -17,6 +17,7 @@ body {
   height: 100px;
   background: lime;
   border: 2px solid black;
+  image-rendering: pixelated;
 }
 
 /* Position each face */
