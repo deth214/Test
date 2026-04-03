@@ -6,8 +6,8 @@ if (!cube) {
   console.log("Cube not found");
 }
 
-let x = 100;
-let y = 100;
+let x = 200;
+let y = 200;
 
 let dx = 2;
 let dy = 2;
@@ -30,7 +30,10 @@ function animate() {
   angle += 1;
 
   cube.style.transform =
-    `translate(${x}px, ${y}px) rotateX(${angle}deg) rotateY(${angle}deg)`;
+    `translate3d(${x}px, ${y}px, 0)
+    rotateX(${angle}deg)
+    rotateY(${angle}deg)
+    translateZ(50px)`;
 
   requestAnimationFrame(animate);
 }
