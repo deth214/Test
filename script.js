@@ -1,3 +1,4 @@
+console.log("JS loaded")
 let cube = document.getElementById("cube");
 
 let x = 100;
