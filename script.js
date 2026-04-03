@@ -27,7 +27,7 @@ function animate() {
 
   angle += 1;
 
-  cube.style.transform = 'translate(${x}px, $(y)px) rotateX(${angle}deg) rotateY(${angle}deg)';
+  cube.style.transform = `translate(${x}px, $(y)px) rotateX(${angle}deg) rotateY(${angle}deg)`;
 
   requestAnimationFrame(animate);
 }
